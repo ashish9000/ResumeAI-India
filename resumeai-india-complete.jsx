@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+const { useState, useCallback, useRef, useEffect } = React;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AI CALL
@@ -1036,7 +1036,8 @@ const NAV_ITEMS = [
   { id:"plans",     label:"Plans",         icon:"💰" },
 ];
 
-export default function ResumeAIIndia() {
+function ResumeAIIndia() {
+
   const [page, setPage]   = useState("home");
   const [plan, setPlan]   = useState("free");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -1113,3 +1114,5 @@ export default function ResumeAIIndia() {
     </div>
   );
 }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ResumeAIIndia />);
